@@ -160,6 +160,13 @@ import html2canvas from 'html2canvas'
 import SettingsPanelContent from '~/components/CodeToImage/SettingsPanelContent.vue'
 import { ClientOnly } from '#components'
 
+useSeoMeta({
+  title: '代碼轉換圖片',
+  description: '將代碼轉換為圖片',
+  ogTitle: '代碼轉換圖片',
+  ogDescription: '將代碼轉換為圖片',
+})
+
 // 添加缺失的DOM元素引用
 const codePreview = ref<HTMLElement | null>(null)
 const codeEditor = ref<HTMLElement | null>(null)

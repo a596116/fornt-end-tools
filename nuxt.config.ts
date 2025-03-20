@@ -15,11 +15,13 @@ export default defineNuxtConfig({
     },
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
+    'nuxt-monaco-editor',
   ],
   css: [
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
     '~/styles/tailwindcss.css',
+    '~/styles/variables.scss',
   ],
 
   components: [
@@ -61,6 +63,18 @@ export default defineNuxtConfig({
       alias: {
         // 可能需要的別名
       },
+    },
+    optimizeDeps: {
+      include: ['monaco-editor'],
+    },
+  },
+
+  monacoEditor: {
+    // These are default values:
+    locale: 'en',
+    componentName: {
+      codeEditor: 'MonacoEditor',
+      diffEditor: 'MonacoDiffEditor',
     },
   },
 })
