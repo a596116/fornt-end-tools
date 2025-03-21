@@ -23,7 +23,12 @@
         v-for="(tool, index) in toolsList"
         :key="index"
       >
-        <NuxtLink :to="tool.path" class="text-decoration-none">
+        <NuxtLink
+          :to="tool.path || undefined"
+          :href="tool.href || undefined"
+          :target="tool.href ? '_blank' : undefined"
+          class="text-decoration-none"
+        >
           <v-card class="h-100 card-hover" hover>
             <v-card-item>
               <template v-slot:prepend>
@@ -70,13 +75,19 @@ const toolsList = [
     title: 'QrCode生成',
     description: '生成或解析QrCode',
   },
-  // {
-  //   path: '/tools/color-generator',
-  //   icon: 'mdi-palette',
-  //   color: 'deep-purple',
-  //   title: '顏色生成',
-  //   description: '顏色選擇與調色板生成',
-  // },
+  {
+    href: 'https://nuxt3-auth-demo.vercel.app/',
+    icon: 'mdi-account-group',
+    title: 'Nuxt 3 Auth',
+    description:
+      '基於 Nuxt 3 和 Auth.js 的第三方登入示範，集成了 Google、GitHub、Facebook、Line 和 Apple 登入功能，提供完整的用戶認證流程實現範例。',
+  },
+  {
+    href: 'https://linewebhook.vercel.app/',
+    icon: 'mdi-chat',
+    title: 'LINE BOT Webhook',
+    description: 'LINE BOT Webhook 更新工具',
+  },
   // {
   //   path: '/tools/img-to-base64',
   //   icon: 'mdi-image',
