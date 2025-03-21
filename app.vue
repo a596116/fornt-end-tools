@@ -74,6 +74,16 @@ onMounted(() => {
     }
   }
 })
+
+useSeoMeta({
+  title: '前端工具箱',
+  description: '一站式前端開發工具集合，提升您的開發效率',
+  ogTitle: '前端工具箱',
+  ogDescription: '一站式前端開發工具集合，提升您的開發效率',
+  ogImage: '/tools.png',
+  ogUrl: 'https://fornt-end-tools.vercel.app/',
+  ogType: 'website',
+})
 </script>
 
 <style>

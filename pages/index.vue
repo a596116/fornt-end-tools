@@ -47,14 +47,6 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title: '前端工具箱',
-  description: '一站式前端開發工具集合，提升您的開發效率',
-  ogTitle: '前端工具箱',
-  ogDescription: '一站式前端開發工具集合，提升您的開發效率',
-  // ogImage: '/og-image.png',
-  // ogUrl: 'https://tool.example.com',
-})
 // 工具列表數據
 const toolsList = [
   {
@@ -71,13 +63,13 @@ const toolsList = [
     title: '代碼比較',
     description: '對比兩段代碼的差異',
   },
-  // {
-  //   path: '/tools/qrcode',
-  //   icon: 'mdi-qrcode',
-  //   color: 'warning',
-  //   title: '二維碼生成',
-  //   description: '生成或解析二維碼',
-  // },
+  {
+    path: '/tools/qrcode',
+    icon: 'mdi-qrcode',
+    color: 'warning',
+    title: 'QrCode生成',
+    description: '生成或解析QrCode',
+  },
   // {
   //   path: '/tools/color-generator',
   //   icon: 'mdi-palette',
