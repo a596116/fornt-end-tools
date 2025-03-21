@@ -261,6 +261,7 @@ const diffEditorOptions = computed(() => ({
     verticalScrollbarSize: 10,
     horizontalScrollbarSize: 10,
   },
+  theme: localStorage.getItem('theme') === 'dark' ? 'vs-dark' : 'vs-light',
 }))
 
 // 清空所有內容

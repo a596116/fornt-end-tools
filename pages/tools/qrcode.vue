@@ -30,7 +30,7 @@
                   variant="outlined"
                   hide-details="auto"
                   rows="4"
-                  class="mb-4"
+                  class="mb-4 text-input"
                   :rules="[(v) => !!v || '請輸入內容']"
                 ></v-textarea>
 
@@ -505,5 +505,24 @@ onMounted(() => {
   .unified-qr-container {
     width: 100%;
   }
+}
+
+/* 適配暗色模式的輸入區域 */
+.text-input :deep(.v-field__overlay) {
+  background-color: transparent !important;
+}
+
+.text-input :deep(.v-field__field) {
+  color: inherit !important;
+}
+
+/* 確保文本區域背景色跟隨主題 */
+:deep(.v-textarea .v-field__input),
+:deep(.v-text-field .v-field__input) {
+  background-color: transparent;
+}
+
+:deep(.v-field--variant-outlined .v-field__outline) {
+  --v-field-border-opacity: 0.38;
 }
 </style>

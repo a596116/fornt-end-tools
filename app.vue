@@ -2,10 +2,10 @@
   <v-app>
     <v-app-bar v-if="!isCodeToImagePage" color="primary" dark>
       <v-app-bar-title>
-        <div class="d-flex align-center">
-          <v-icon icon="mdi-toolbox" class="mr-2" />
+        <Anchor :to="'/'" class="d-flex align-center w-fit px-3">
+          <SvgIcon name="tools" class="mr-2" />
           前端工具箱
-        </div>
+        </Anchor>
       </v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn icon @click="toggleTheme">
@@ -14,7 +14,9 @@
     </v-app-bar>
 
     <v-main :class="{ 'pa-0': isCodeToImagePage, 'theme--dark': isDark }">
-      <NuxtPage />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </v-main>
 
     <footer v-if="!isCodeToImagePage" class="footer-container">
